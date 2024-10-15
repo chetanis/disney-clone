@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@layer components {
+  .underline-animation{
+    @apply relative;
+  }
+
+
+  .underline-animation::after{
+    @apply absolute content-[''] w-full h-0.5 bg-white bottom-[-0.25rem] 
+    left-0  origin-bottom-left scale-x-0 hover:scale-x-100 transition-transform 
+    duration-200;
+  }
+}
+
